@@ -1,4 +1,4 @@
 # TODO
 
-* Add the recompilation notifier in toolsup
-* Add an .bash_aliases updater 
+[x] Add the recompilation notifier in toolsup
+[ ] Add an .bash_aliases updater 
