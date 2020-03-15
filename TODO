@@ -1,4 +1,5 @@
 # TODO
 
 [x] Add the recompilation notifier in toolsup
-[ ] Add an .bash_aliases updater 
+[x] Add an .bash_aliases updater 
+[ ] Add a better support for packages installed via repo, compiled from sources, gits
