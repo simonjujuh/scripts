@@ -10,20 +10,12 @@ current_dir="$(pwd)"
 
 cd "$dir"
 for repo in $(find "$dir" -type d -name .git); do
-  echo -en "\033[33m[*]\033[0m Update $repo... "
-
+  echo -e "\033[33m$repo\033[0m"
   # perfom the pull
   cd $repo && cd ..
-
-  git pull | grep -q "Already up to date"
-  if [ $? -eq 0 ]; then
-    echo "Done."
-  else
-    echo -e "\n\033[31m[!]\033[0m Changes made! Potential recompilation needed for $repo"
-  fi
+  git pull
   cd $current_dir
-
-  # add a newline
+  echo # add a newline
 done
 
-echo -e "\033[33m[*]\033[0m Updates completed"
+echo -e "\033[33mUpdates completed\033[0m"
